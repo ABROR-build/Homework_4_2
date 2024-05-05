@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <img src="{{ product.image.url }}">
+    <h3>Model: {{ product.model }}</h3>
+    <p>Category: {{ product.category }}</p>
+    <p>Description: {{ product.description }}</p>
+    <h4>Price: {{ product.price }}</h4>
+    <a href="{% url 'homepage' %}">Categories</a>
+
+    <p>
+        <a href="{% url 'edit_product' product.pk %}">
+            Edit
+        </a>
+    </p>
+
+    <p>
+        <a href="{% url 'delete_product' product.pk %}">
+            Delete
+        </a>
+    </p>
+</body>
+</html>
